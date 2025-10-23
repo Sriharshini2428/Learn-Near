@@ -1,148 +1,134 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 body {
-  background-color: #f0f6ff;
-  color: #003366;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-/* Center container */
-.main-container {
-  text-align: center;
-}
-
-/* Contact Us button */
-#contactBtn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 15px 35px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
-}
-
-#contactBtn:hover {
-  background-color: #0056b3;
-}
-
-/* Contact box */
-.contact-container {
-  margin-top: 30px;
-  background: #ffffff;
-  color: #003366;
-  padding: 40px 50px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 600px;
-  display: inline-block;
-}
-
-.hidden {
-  display: none;
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
 h1 {
-  font-size: 2rem;
-  color: #0056b3;
-  margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-p {
-  color: #333;
-  margin-bottom: 25px;
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
 }
 
-/* Contact info section */
-.contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+legend {
+    font-weight: bold;
+    color: #0056b3;
+    padding: 0 10px;
 }
 
-.info-box {
-  background: #e6f0ff;
-  border-radius: 10px;
-  padding: 20px 25px;
-  width: 200px;
-  text-align: center;
-  transition: all 0.3s ease;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.info-box:hover {
-  background: #cce0ff;
-  transform: translateY(-5px);
+/* Style for the new primary radio buttons */
+.radio-group-primary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-.info-box i {
-  font-size: 28px;
-  color: #0056b3;
-  margin-bottom: 10px;
+.radio-group-primary label {
+    margin-left: 10px;
+    font-weight: 500;
 }
 
-.info-box a {
-  color: #003366;
-  text-decoration: none;
+.subsection-title {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
 }
 
-/* Social icons */
-.social-icons {
-  margin-top: 25px;
+/* Style for the general checkbox groups */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-.social {
-  font-size: 30px;
-  margin: 0 10px;
-  color: #0056b3;
-  transition: 0.3s ease;
+.checkbox-group label {
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-weight: normal;
 }
 
-.social.instagram:hover {
-  color: #e1306c;
+/* Style for the Arts grid layout to show multiple options side-by-side */
+.checkbox-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-.social.facebook:hover {
-  color: #1877f2;
-}
-
-/* Close button */
-#closeBtn {
-  margin-top: 30px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-#closeBtn:hover {
-  background: #0056b3;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-  .contact-container {
-    width: 95%;
-    padding: 25px;
-  }
-  .info-box {
+input[type="text"], 
+input[type="number"], 
+input[type="tel"], 
+select {
     width: 100%;
-  }
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+input[type="file"] {
+    padding: 10px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#submitBtn {
+    width: 100%;
+    background-color: #28a745; /* Green for success/submission */
+    margin-top: 15px;
+}
+
+#submitBtn:disabled {
+    background-color: #6c757d; /* Gray when disabled */
+    cursor: not-allowed;
+}
+
+/* Basic styling for mobile responsiveness */
+@media (max-width: 650px) {
+    .container {
+        padding: 15px;
+    }
+    .checkbox-group-grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+    }
 }
