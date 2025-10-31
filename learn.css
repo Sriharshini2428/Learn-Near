@@ -1,0 +1,15 @@
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // stop form from refreshing page
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const role = document.getElementById("role").value;
+
+  if (!email || !password || !role) {
+    alert("Please fill in all fields!");
+    return;
+  }
+
+  // Simple fake login (you can replace this with real backend later)
+  alert(Welcome ${role}! You have successfully logged in.);
+});
